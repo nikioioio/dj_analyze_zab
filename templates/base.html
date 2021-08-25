@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static "/main_static/app.css" %}">
+    <link rel="stylesheet" href="{% static "/main_static/modal.css" %}">
+    <script type="text/javascript" src="{% static "/main_static/jquery-3.6.0.js" %}"></script>
+
+    {% block css_files %}{% endblock %}
+
+</head>
+<body>
+<div class="main__contaner">
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">{{ title }}</div>
+                <nav class="nav">
+                    <a class="nav__link" href="{% url "starting-page" %}">Home</a>
+                    {#                    <a class="nav__link" href="">Отчет по маржинальности</a>#}
+                    {#                    <a class="nav__link" href="">BLog</a>#}
+                    {#                    <a class="nav__link" href="">Work</a>#}
+                    {#                    <a class="nav__link" href="">Contact</a>#}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+
+            <div class="intro__inner">
+                {% block content %}
+
+
+                {% endblock %}
+
+                <div id="circularG">
+                    <div id="circularG_1" class="circularG"></div>
+                    <div id="circularG_2" class="circularG"></div>
+                    <div id="circularG_3" class="circularG"></div>
+                    <div id="circularG_4" class="circularG"></div>
+                    <div id="circularG_5" class="circularG"></div>
+                    <div id="circularG_6" class="circularG"></div>
+                    <div id="circularG_7" class="circularG"></div>
+                    <div id="circularG_8" class="circularG"></div>
+                </div>
+                {#            {% include  "download.html" %}#}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h1>HELP</h1>
+    </div>
+
+</div>
+
+</div>
+</body>
+
+</html>
+
+

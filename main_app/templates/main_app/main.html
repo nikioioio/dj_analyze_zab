@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "main_app/main.css" %}">
+{% endblock %}
+
+{% block content %}
+
+                    <ul class="border">
+{#                        <li><a class="nav__link" a href="{% url "starting-page-margin"%}">Отчет по маржинальности</a></li>#}
+                        <li><a class="nav__link" a href="{% url "starting-page-plain"%}">Планирование</a></li>
+                        <li><a class="nav__link" a href="">Отчет3</a></li>
+                        <li><a class="nav__link" a href="">Отчет4</a></li>
+                        <li><a class="nav__link" a href="">Отчет5</a></li>
+                    </ul>
+{% endblock %}
